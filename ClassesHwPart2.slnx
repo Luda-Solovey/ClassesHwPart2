@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="ClassesHwPart2/CurrencyConverter.csproj" />
+  <Project Path="EmployeeSalary/EmployeeSalary.csproj" />
+  <Project Path="Invoice/Invoice.csproj" />
+</Solution>
