@@ -2,5 +2,6 @@
   <Project Path="ClassesHwPart2/CurrencyConverter.csproj" />
   <Project Path="EmployeeSalary/EmployeeSalary.csproj" />
   <Project Path="Invoice/Invoice.csproj" />
+  <Project Path="MediaPlayer/MediaPlayer.csproj" Id="d776b7e7-adcd-4db3-89ce-9774c4111e78" />
   <Project Path="User/User.csproj" />
 </Solution>

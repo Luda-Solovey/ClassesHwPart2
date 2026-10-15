@@ -13,7 +13,7 @@
         {
             User user1 = new User("lsolovey", "Luda", "Solovey", new DateOnly(1987, 1, 1))
             {
-                FillQuestionnaire = new DateOnly(2026, 10, 1)
+                DateOfQuestionnaireFilling = new DateOnly(2026, 10, 1)
             };
             user1.DisplayUserInfo();
         }

@@ -10,7 +10,7 @@
 
         public DateOnly Age { get; private set; } = age;
 
-        public DateOnly FillQuestionnaire { get; init; } 
+        public DateOnly DateOfQuestionnaireFilling { get; init; } 
 
         public void DisplayUserInfo()
         {
@@ -18,7 +18,7 @@
             Console.WriteLine($"First Name: {FirstName}");
             Console.WriteLine($"Last Name: {LastName}");
             Console.WriteLine($"Age: {Age}");
-            Console.WriteLine($"Fill Questionnaire: {FillQuestionnaire}");
+            Console.WriteLine($"Fill Questionnaire: {DateOfQuestionnaireFilling}");
         }
     }
 }
