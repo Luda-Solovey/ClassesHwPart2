@@ -13,13 +13,8 @@
         static void Main(string[] args)
         {
             Employee employee = new Employee("Illia", "Shevchenko", Position.Engineer, new DateOnly(2016, 6, 1));
-            Console.WriteLine($"Employee: {employee.FirstName} {employee.LastName}");
 
-            decimal salary = employee.CalculateSalary(employee.Position);
-            Console.WriteLine($"Salary: {salary}");
-
-            decimal tax = employee.CalculateTax();
-            Console.WriteLine($"Tax: {tax}");
+            employee.GetInfo();
         }
     }
 }
