@@ -24,7 +24,7 @@
             switch (Article)
             {
                 case "Computer":
-                    price = 10.0m;
+                    price = 100.0m;
                     break;
                 case "Monitor":
                     price = 20.0m;
@@ -33,7 +33,7 @@
                     price = 30.0m;
                     break;
                 case "Notebook":
-                    price = 40.0m;
+                    price = 120.0m;
                     break;
                 default:
                     throw new ArgumentException("Invalid article");

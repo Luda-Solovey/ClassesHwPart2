@@ -2,15 +2,15 @@
 {
     public class User(string login, string firstName, string lastName, DateOnly age)
     {
-        public string Login { get; private set; } = login;
+        public string Login { get; set; } = login;
 
-        public string FirstName { get; private set; } = firstName;
+        public string FirstName { get; set; } = firstName;
 
-        public string LastName { get; private set; } = lastName;
+        public string LastName { get; set; } = lastName;
 
-        public DateOnly Age { get; private set; } = age;
+        public DateOnly Age { get; } = age;
 
-        public DateOnly DateOfQuestionnaireFilling { get; init; } 
+        public required DateOnly DateOfQuestionnaireFilling { get; init; } 
 
         public void DisplayUserInfo()
         {

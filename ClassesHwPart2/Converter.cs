@@ -2,44 +2,44 @@
 {
     public class Converter(double usdToGrn, double eurToGrn, double gbtTogrn)
     {
-        public double UsdToGrn { get; } = usdToGrn;
+        public double UsdRate { get; } = usdToGrn;
 
-        public double EurToGrn { get; } = eurToGrn;
+        public double EurRate { get; } = eurToGrn;
 
-        public double GbtToGtn { get; } = gbtTogrn;
+        public double GbtRate { get; } = gbtTogrn;
 
         //якщо конвертуємо іншу валюту в гривну
 
         public double ConvertUsdToGrn(double amount)
         {
-            return amount * UsdToGrn;
+            return amount * UsdRate;
         }
 
         public double ConvertEurToGrn(double amount)
         {
-            return amount * EurToGrn;
+            return amount * EurRate;
         }
 
         public double ConvertGbtToGrn(double amount)
         {
-            return amount * GbtToGtn;
+            return amount * GbtRate;
         }
 
         //якщо конвертуємо гривну в іншу валюту
 
         public double ConvertGrnToUsd(double amount)
         {
-            return amount / UsdToGrn;
+            return amount / UsdRate;
         }
 
         public double ConvertGrnToEur(double amount)
         {
-            return amount / EurToGrn;
+            return amount / EurRate;
         }
 
         public double ConvertGrnToGbt(double amount)
         {
-            return amount / GbtToGtn;
+            return amount / GbtRate;
         }
 
     }
