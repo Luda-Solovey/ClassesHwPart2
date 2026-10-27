@@ -2,13 +2,13 @@
 {
     public class Passport
     {
-        public string Seria { get; }
+        public string Seria { get; set; }
 
-        public int Number { get; }
+        public string Number { get; set; }
 
-        public DateOnly DateOfIssue { get;}
+        public DateOnly DateOfIssue { get; set; }
 
-        public Passport(string seria, int number, DateOnly dataOfIssue)
+        public Passport(string seria, string number, DateOnly dataOfIssue)
         {
             Seria = seria;
             Number = number;

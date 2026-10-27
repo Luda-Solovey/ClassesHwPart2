@@ -14,20 +14,24 @@
         /// <param name="args"></param>
         static void Main(string[] args)
         {
-            ExcelentPupil excelentPupil = new("Luda", "Solovey", "Alex", new DateOnly(1987, 03, 23));
+            ExcelentPupil excelentPupil = new("Luda", "Solovey", "Alex");
             //excelentPupil.GetFullInformation();
 
-            GoodPupil goodPupil = new("Zenia", "Sol", "aaa", new DateOnly(1980, 03, 23));
+            GoodPupil goodPupil = new("Zenia", "Sol", "aaa");
             //goodPupil.GetFullInformation();
 
-            BadPupil badPupil = new("Illia", "Simonov", "Petrov", new DateOnly(1986, 05, 05), "АН", 457623, new DateOnly(2004, 06, 30));
+            Passport badPupilPassport = new Passport("AN", "8456927", new DateOnly(2016, 12,23 ));
+            BadPupil badPupil = new("Illia", "Simonov", "Petrov", new DateOnly(1987, 12, 30),badPupilPassport);
             //badPupil.GetFullInformation();
 
             ClassRoom classRoom = new(excelentPupil, goodPupil, badPupil);
 
             foreach (var pupil in classRoom.Pupils)
             {
-                pupil.GetFullInformation();
+                pupil.Study();
+                pupil.Read();
+                pupil.Write();
+                pupil.Relax();
             }
         }
     }

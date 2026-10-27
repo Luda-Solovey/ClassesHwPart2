@@ -2,13 +2,13 @@
 {
     public class GoodPupil : Pupil
     {
-        public GoodPupil(string firstName, string lastName, string middleName, DateOnly dateOfBirthday)
-            : base(firstName, lastName, middleName, dateOfBirthday)
+        public GoodPupil(string firstName, string lastName, string middleName)
+            : base(firstName, lastName, middleName)
         {
         }
 
-        public GoodPupil(string firstName, string lastName, string middleName, DateOnly dateOfBirthday, string seriaPasport, int numberPassport, DateOnly dataPassportIssue)
-        : base(firstName, lastName, middleName, dateOfBirthday, seriaPasport, numberPassport, dataPassportIssue)
+        public GoodPupil(string firstName, string lastName, string middleName, DateOnly dateOfBirthday, Passport passport)
+        : base(firstName, lastName, middleName, dateOfBirthday, passport)
         {
         }
 

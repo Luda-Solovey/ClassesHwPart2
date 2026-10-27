@@ -10,14 +10,15 @@
     {
         static void Main(string[] args)
         {
-            Vehicle ship = new Ship("Avrora", 10, 20, 100000, 100, 2002, 180, "Santiago");
-            Vehicle plane = new Plane("TU-214", 35, 80, 500000,  300, 2025, 300, 2000);
-            Vehicle car = new Car("Ferrary", 80, 75, 150000, 180, 2024);
+            Vehicle ship = new Ship("Avrora", new Point(10, 20), 100000, 100, 2002, 180, "Santiago");
+            Vehicle plane = new Plane("TU-214", new Point(35, 80), 500000,  300, 2025, 300, 2000);
+            Vehicle car = new Car("Ferrary", new Point(80, 75), 150000, 180, 2024);
 
             Vehicle[] vehicles = [ship, plane, car];
             foreach (var vehicle in vehicles)
             {
-                vehicle.GetInformation();
+                Console.WriteLine(vehicle.GetInformation());
+                
             }
 
         }

@@ -9,29 +9,27 @@
     {
         public string Name { get; }
 
-        public int X { get; set; }
-
-        public int Y { get; set; }
+        public Point? Points { get; set; }
 
         public int Price { get; }
         public int Speed { get; }
 
         public int YearOfManufacture { get; }
 
-        public Vehicle(string name, int x, int y, int price, int speed, int manufactureYear)
+        public Vehicle(string name, Point points, int price, int speed, int manufactureYear)
         {
             Name = name;
-            X = x;
-            Y = y;
+            Points?.X = points.X;
+            Points?.Y = points.Y;
             Price = price;
             Speed = speed;
             YearOfManufacture = manufactureYear;
 
         }
 
-        public virtual void GetInformation()
+        public virtual string GetInformation()
         {
-            Console.WriteLine($"VehicleApp - {Name}, coordinate X - {X}, coordinate Y - {Y}, price - {Price}, speed - {Speed}, yearOfManufacture - {YearOfManufacture}");
+            return $"VehicleApp - {Name}, coordinate X - {Points?.X}, coordinate Y - {Points?.Y}, price - {Price}, speed - {Speed}, yearOfManufacture - {YearOfManufacture}";
         }
     }
 }

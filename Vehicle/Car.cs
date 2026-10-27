@@ -2,15 +2,15 @@
 {
     public class Car : Vehicle
     {
-        public Car(string name, int x, int y, int price, int speed, int manufactureYear)
-        : base(name, x, y, price, speed, manufactureYear)
+        public Car(string name, Point points, int price, int speed, int manufactureYear)
+        : base(name, points, price, speed, manufactureYear)
         {
             
         }
 
-        public override void GetInformation()
+        public override string GetInformation()
         {
-            Console.WriteLine($"I`m CAR {Name}, coordinate X - {X}, coordinate Y - {Y}, price - {Price}, speed - {Speed}, yearOfManufacture - {YearOfManufacture}");
+           return $"I`m CAR {Name}, coordinate X - {Points?.X}, coordinate Y - {Points?.Y}, price - {Price}, speed - {Speed}, yearOfManufacture - {YearOfManufacture}";
         }
     }
 }

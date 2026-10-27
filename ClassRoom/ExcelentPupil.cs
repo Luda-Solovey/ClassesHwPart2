@@ -2,13 +2,13 @@
 {
     public class ExcelentPupil : Pupil
     {
-        public ExcelentPupil(string firstName, string lastName, string middleName, DateOnly dateOfBirthday)
-            : base(firstName, lastName, middleName, dateOfBirthday)
+        public ExcelentPupil(string firstName, string lastName, string middleName)
+            : base(firstName, lastName, middleName)
         {
         }
 
-        public ExcelentPupil(string firstName, string lastName, string middleName, DateOnly dateOfBirthday, string seriaPasport, int numberPassport, DateOnly dataPassportIssue)
-        : base(firstName, lastName, middleName, dateOfBirthday, seriaPasport, numberPassport, dataPassportIssue)
+        public ExcelentPupil(string firstName, string lastName, string middleName, DateOnly dateOfBirthday, Passport passport)
+        : base(firstName, lastName, middleName, dateOfBirthday, passport)
         {
         }
 

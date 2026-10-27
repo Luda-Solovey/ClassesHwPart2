@@ -1,18 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace ClassRoom
+﻿namespace ClassRoom
 {
     internal class BadPupil : Pupil
     {
-        public BadPupil(string firstName, string lastName, string middleName, DateOnly dateOfBirthday)
-            : base(firstName, lastName, middleName, dateOfBirthday)
+        public BadPupil(string firstName, string lastName, string middleName)
+        : base(firstName, lastName, middleName)
         {
         }
 
-        public BadPupil(string firstName, string lastName, string middleName, DateOnly dateOfBirthday, string seriaPasport, int numberPassport, DateOnly dataPassportIssue)
-        : base(firstName, lastName, middleName, dateOfBirthday, seriaPasport, numberPassport, dataPassportIssue)
+        public BadPupil(string firstName, string lastName, string middleName, DateOnly dateOfBirthday, Passport passport)
+        : base(firstName, lastName, middleName, dateOfBirthday, passport)
         {
         }
 

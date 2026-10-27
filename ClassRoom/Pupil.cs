@@ -8,27 +8,27 @@
 
         public string MiddleName { get; }
 
-        public string FullName
-        {
-            get => FirstName + ' ' + LastName;
-        }
+        public string FullName => FirstName + ' ' + LastName;
+        
 
         public DateOnly DateOfBirthday { get; }
 
-        public Passport? Passport { get; } = new Passport("AA", 123456, new DateOnly(1999, 12, 12));
+        public Passport? Passport { get; }
 
-        public Pupil(string firstName, string lastName, string middleName, DateOnly dateOfBirthday)
+        public Pupil(string firstName, string lastName, string middleName)
         {
             FirstName = firstName;
             LastName = lastName;
             MiddleName = middleName;
-            DateOfBirthday = dateOfBirthday;
         }
 
-        public Pupil(string firstName, string lastName, string middleName, DateOnly dateOfBirthday, string seriaPasport, int numberPassport, DateOnly dataPassportIssue)
-            :this(firstName, lastName, middleName, dateOfBirthday)
+        public Pupil(string firstName, string lastName, string middleName, DateOnly dateOfBirthday, Passport passport)
+        : this(firstName,  lastName,  middleName)
         {
-            Passport = new Passport(seriaPasport, numberPassport, dataPassportIssue);// питання: чи правильно, що паспорт реалізувала через композицію (чи таки потрібна агрегація)
+            DateOfBirthday = dateOfBirthday;
+            Passport?.Seria = passport.Seria;
+            Passport?.Number = passport.Number;
+            Passport?.DateOfIssue = passport.DateOfIssue;
         }
 
         public virtual void Study()
@@ -49,14 +49,6 @@
         public virtual void Relax()
         {
             Console.WriteLine("I`m a student. I relax");
-        }
-
-        public virtual void GetFullInformation()
-        {
-            Study();
-            Read();
-            Write();
-            Relax();
         }
     }
 }
