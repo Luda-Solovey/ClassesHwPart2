@@ -10,7 +10,19 @@
     /// </summary>
     public abstract class Character
     {
-        public int NumbersOfDaysLived { get; set; }
+        protected Character(string name)
+        {
+            Name = name;
+            HappinessLevel = 5;
+            HungerLevel = 0;
+            NumbersOfDaysLived = 0;
+            IsClean = true;
+            IsAwake = true;
+            PlayedThisHour = false;
+        }
+
+        public string Name { get; set; }
+        public int NumbersOfDaysLived { get; set; } 
         public int HappinessLevel { get; set; }
 
         public int HungerLevel { get; set; }
@@ -19,20 +31,44 @@
 
         public bool IsClean { get; set; }
 
-        public abstract string Feed();
+        public bool PlayedThisHour { get; set; }
 
-        public abstract string Play();
+        public virtual void PassHour()
+        {
+            HungerLevel++;
+            if (!PlayedThisHour)
+            {
+                HappinessLevel--;
+            }
+        }
+
+        public virtual void Feed()
+        {
+            if (HungerLevel > 0)
+            {
+                HungerLevel = 0;
+            }
+        }
+
+        public virtual void Play()
+        {
+            PlayedThisHour = true;
+            HappinessLevel++;
+        }
 
         public abstract string Clean();
 
         public abstract string Wash();
 
-        public abstract string SendToBed();
+        public virtual string SendToBed()
+        {
+            IsAwake = false;
+            return $"Character went to sleep.";
+        }
 
-        public string GiveInformationAboutCurrentState()
+        public virtual string GiveInformationAboutCurrentState()
         {
             return $"I`m {(IsClean ? "clean" : "dirty")}, I`m {(IsAwake ? "staying awake" : "sleeping")}, my hunger level equals {HungerLevel}, my happines level {HappinessLevel}";
         }
-
     }
 }

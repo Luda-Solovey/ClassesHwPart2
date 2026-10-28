@@ -1,33 +1,26 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Abstraction_Character
+﻿namespace Abstraction_Character
 {
     internal class Parrot : Character
     {
+        public Parrot(string name)
+        : base(name)
+        {
+        }
         public override string Clean()
         {
+            IsClean = true;
             return $"I`m parrot. I clean my feathers";
-        }
-
-        public override string Feed()
-        {
-            return $"I`m parrot. I feed a small parrot";
-        }
-
-        public override string Play()
-        {
-            return $"I play with a small parrot";
         }
 
         public override string SendToBed()
         {
-            return $"I send to bad a small parrot";
+            IsAwake = false;
+            return $"Parrot went to bad";
         }
 
         public override string Wash()
         {
+            IsClean = true;
             return $"I`m parrot. Sometimes I wash my body";
         }
     }
