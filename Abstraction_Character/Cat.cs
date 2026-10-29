@@ -2,27 +2,38 @@
 {
     public class Cat : Character
     {
+        public override List<FoodTypes> AvailiableFood => new() { FoodTypes.Beef, FoodTypes.CatFood, FoodTypes.Fish };
+
         public Cat(string name)
         : base(name)
         {
         }
 
-        public override string Clean()
+        public override void Clean()
         {
-            IsClean = true;
-            return $"I`m cat. I can`t clean anything";
+            Console.WriteLine($"I`m cat.They cleaned up after me.");
         }
 
-        public override string Wash()
+        public override void Wash()
         {
-            IsClean = true;
-            return $"I`m cat. I wash my face in the mornings and in the evenings";
+            base.Wash();
+            Console.WriteLine($"I`m cat. I wash my face in the mornings and in the evenings");
         }
 
-        public override string SendToBed()
+        public override void SendToBed()
         {
-            IsAwake = false;
-            return $"Cat went to sleep.";
+            base.SendToBed();
+            Console.WriteLine( $"Cat went to sleep.");
+        }
+
+        public override void Speek()
+        {
+            throw new NotImplementedException();
+        }
+
+        public override void DoActivity()
+        {
+            throw new NotImplementedException();
         }
     }
 }

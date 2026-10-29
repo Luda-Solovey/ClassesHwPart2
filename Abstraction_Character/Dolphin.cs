@@ -6,21 +6,34 @@
         : base(name)
         {
         }
-        public override string Clean()
+
+        public override List<FoodTypes> AvailiableFood => new() { FoodTypes.Algae, FoodTypes.Fish };
+
+        public override void Clean()
         {
-            IsClean = true;
-            return $"I`m dolphin. I can`t clean anything";
+            Console.WriteLine( $"I`m dolphin. I can`t clean anything");
         }
 
-        public override string SendToBed()
+        public override void DoActivity()
         {
-            return $"Dolphin went to bad";
+            throw new NotImplementedException();
         }
 
-        public override string Wash()
+        public override void SendToBed()
+        {
+            base.SendToBed();
+            Console.WriteLine( $"Dolphin sleep in the see");
+        }
+
+        public override void Speek()
+        {
+            throw new NotImplementedException();
+        }
+
+        public override void Wash()
         {
             IsClean = true;
-            return $"I`m dolphin. I wash my body all the time";
+            Console.WriteLine( $"I`m dolphin. I wash my body all the time");
         }
     }
 }

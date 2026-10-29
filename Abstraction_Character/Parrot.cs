@@ -2,26 +2,37 @@
 {
     internal class Parrot : Character
     {
+        public override List<FoodTypes> AvailiableFood => new() { FoodTypes.Grain };
+
         public Parrot(string name)
         : base(name)
         {
         }
-        public override string Clean()
+        public override void Clean()
         {
-            IsClean = true;
-            return $"I`m parrot. I clean my feathers";
+            Console.WriteLine($"I`m parrot.They cleaned up after me.");
         }
 
-        public override string SendToBed()
+        public override void Wash()
         {
-            IsAwake = false;
-            return $"Parrot went to bad";
+            base.Wash();
+            Console.WriteLine($"I`m parrot. I wash my face in the mornings and in the evenings");
         }
 
-        public override string Wash()
+        public override void SendToBed()
         {
-            IsClean = true;
-            return $"I`m parrot. Sometimes I wash my body";
+            base.SendToBed();
+            Console.WriteLine($"parrot went to sleep.");
+        }
+
+        public override void Speek()
+        {
+            throw new NotImplementedException();
+        }
+
+        public override void DoActivity()
+        {
+            throw new NotImplementedException();
         }
     }
 }

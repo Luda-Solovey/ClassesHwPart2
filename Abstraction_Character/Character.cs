@@ -13,16 +13,17 @@
         protected Character(string name)
         {
             Name = name;
-            HappinessLevel = 5;
-            HungerLevel = 0;
-            NumbersOfDaysLived = 0;
+            HappinessLevel = 10;
             IsClean = true;
             IsAwake = true;
-            PlayedThisHour = false;
         }
 
-        public string Name { get; set; }
-        public int NumbersOfDaysLived { get; set; } 
+        public abstract List<FoodTypes> AvailiableFood { get; }
+
+        public string Name { get; }
+
+        public int NumbersOfDaysLived { get; set; }
+
         public int HappinessLevel { get; set; }
 
         public int HungerLevel { get; set; }
@@ -40,35 +41,45 @@
             {
                 HappinessLevel--;
             }
+
+            PlayedThisHour = false;
         }
 
-        public virtual void Feed()
+        public virtual void Feed(FoodTypes food)
         {
+            Food foodObject = new(food);
+
             if (HungerLevel > 0)
             {
-                HungerLevel = 0;
+                HungerLevel -= foodObject.CaloriesRate;
             }
         }
 
-        public virtual void Play()
+        public virtual void Play(int duration) //to do
         {
             PlayedThisHour = true;
-            HappinessLevel++;
+            HappinessLevel += duration / 5; // make formula
         }
 
-        public abstract string Clean();
+        public abstract void Clean(); //They cleaned up after me.  for cat and dog
 
-        public abstract string Wash();
+        public virtual void Wash()
+        {
+            IsClean = true;
+        }
 
-        public virtual string SendToBed()
+        public virtual void SendToBed()
         {
             IsAwake = false;
-            return $"Character went to sleep.";
         }
 
         public virtual string GiveInformationAboutCurrentState()
         {
             return $"I`m {(IsClean ? "clean" : "dirty")}, I`m {(IsAwake ? "staying awake" : "sleeping")}, my hunger level equals {HungerLevel}, my happines level {HappinessLevel}";
         }
+
+        public abstract void Speek();
+
+        public abstract void DoActivity();
     }
 }

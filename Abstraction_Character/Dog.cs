@@ -2,26 +2,38 @@
 {
     internal class Dog : Character
     {
+        public override List<FoodTypes> AvailiableFood => [FoodTypes.Bone, FoodTypes.DogFood, FoodTypes.Beef];
+
         public Dog(string name)
         : base(name)
         {
         }
-        public override string Clean()
+        public override void Clean()
         {
-            IsClean = true;
-            return $"I`m dog. I can`t clean anything";
+            Console.WriteLine($"I`m dog.They cleaned up after me.");
         }
 
-        public override string Wash()
+        public override void Wash()
         {
-            IsClean = true;
-            return $"I`m dog. I don`t wash my body";
+            base.Wash();
+            Console.WriteLine($"I`m dog. I wash my face in the mornings and in the evenings");
         }
 
-        public override string SendToBed()
+        public override void SendToBed()
         {
-            IsAwake = false;
-            return $"Dog went to sleep.";
+            base.SendToBed();
+            Console.WriteLine($"Dog went to sleep.");
         }
+
+        public override void Speek()
+        {
+            throw new NotImplementedException();
+        }
+
+        public override void DoActivity()
+        {
+            throw new NotImplementedException();
+        }
+
     }
 }
