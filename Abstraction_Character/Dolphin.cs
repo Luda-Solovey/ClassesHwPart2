@@ -11,12 +11,12 @@
 
         public override void Clean()
         {
-            Console.WriteLine( $"I`m dolphin. I can`t clean anything");
+            Console.WriteLine( $"I`m dolphin. I don`t need anyone clean up after me.");
         }
 
         public override void DoActivity()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Dolphin surface and submerge in the water");
         }
 
         public override void SendToBed()
@@ -27,7 +27,7 @@
 
         public override void Speek()
         {
-            throw new NotImplementedException();
+            Console.WriteLine($"Dolphin makes whistling and chirping sounds");
         }
 
         public override void Wash()

@@ -36,7 +36,7 @@
 
         public virtual void PassHour()
         {
-            HungerLevel++;
+            HungerLevel += 100;
             if (!PlayedThisHour)
             {
                 HappinessLevel--;

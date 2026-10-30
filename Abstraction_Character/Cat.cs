@@ -28,12 +28,12 @@
 
         public override void Speek()
         {
-            throw new NotImplementedException();
+            Console.WriteLine($"Cat says \"Myaw\"");
         }
 
         public override void DoActivity()
         {
-            throw new NotImplementedException();
+            Console.WriteLine($"Cat plays with a mice");
         }
     }
 }

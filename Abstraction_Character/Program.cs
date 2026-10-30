@@ -19,8 +19,7 @@ namespace Abstraction_Character
             foreach (var character in characters)
             {
                 Console.WriteLine(character.Name);
-                // Меню вибору їжі
-                // Відобразити список доступної їжі відповідної тваринки
+                // Показуємо меню доступної кожній тварикі їжі
                 Console.WriteLine("Feed pet. Availiable Food:");
                 for (int i = 0; i < character.AvailiableFood.Count; i++)
                 {
@@ -33,7 +32,7 @@ namespace Abstraction_Character
                 {
                     Console.WriteLine("Оберіть їжу (треба ввести номер обраної їжі). Або введіть 'exit' для виходу.");
 
-                    string enteredValue = Console.ReadLine();
+                    string? enteredValue = Console.ReadLine();
 
                     //перевірка на 'exit'
                     if (enteredValue?.ToUpper() == "EXIT")
@@ -53,27 +52,27 @@ namespace Abstraction_Character
                     Console.WriteLine("Введене не правильне значення. Введіть значення (цифру) з запропонованих варіантів");
                 }
 
+                character.PassHour();
+                Console.WriteLine(character.GiveInformationAboutCurrentState());
                 character.Feed(character.AvailiableFood[choosenValue - 1]);
                 Console.WriteLine(character.GiveInformationAboutCurrentState());
                 character.Play(10);
-                Console.WriteLine(character.GiveInformationAboutCurrentState());
-                character.PassHour();
                 Console.WriteLine(character.GiveInformationAboutCurrentState());
                 character.Clean();
                 Console.WriteLine(character.GiveInformationAboutCurrentState());
                 character.SendToBed();
                 Console.WriteLine(character.GiveInformationAboutCurrentState());
-                Console.WriteLine(new string('*', 30));
                 character.SendToBed();
-                Console.WriteLine();
+                Console.WriteLine(new string('*', 30));
             }
 
             Console.WriteLine(new string('*', 50));
 
             var petList = characters.ToList<Character>();
-
             MyPets myPets = new();
 
+            //будемо всіх, якщо хтось спить
+            Console.WriteLine("Якщо хтось спить - будемо");
             myPets.WakeUpPet(petList);
 
             foreach (var pet in petList)
@@ -81,6 +80,8 @@ namespace Abstraction_Character
                 Console.WriteLine($"Pet {pet.Name} IsAwake is {pet.IsAwake}");
             }
 
+            //відправляємо всіх спати
+            Console.WriteLine("Вкладаємо всіх спати");
             myPets.PutToBad(petList);
             foreach (var pet in petList)
             {

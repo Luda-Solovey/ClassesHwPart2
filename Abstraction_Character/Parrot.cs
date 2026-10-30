@@ -27,12 +27,12 @@
 
         public override void Speek()
         {
-            throw new NotImplementedException();
+            Console.WriteLine($"Parrot says \"Chik-chirik\"");
         }
 
         public override void DoActivity()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Parrot sings songs and looks at the mirror.");
         }
     }
 }
