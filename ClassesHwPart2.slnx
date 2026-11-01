@@ -4,6 +4,7 @@
   <Project Path="ClassRoom/ClassRoom.csproj" Id="cf8242cd-9342-4347-9003-ea0b9ce67b07" />
   <Project Path="DocumentWorker/DocumentWorkerApp.csproj" Id="b235dec4-0813-4b53-bfaa-7772ee86b085" />
   <Project Path="EmployeeSalary/EmployeeSalary.csproj" />
+  <Project Path="Figure_Interfaces/Figure_Interfaces.csproj" Id="f3f8a000-2193-4551-a6e8-957bb0ba0af7" />
   <Project Path="Invoice/Invoice.csproj" />
   <Project Path="MediaPlayer/MediaPlayer.csproj" Id="d776b7e7-adcd-4db3-89ce-9774c4111e78" />
   <Project Path="PrinterApp/PrinterApp.csproj" Id="94c43541-6eab-4884-956d-7e95623e8f10" />
