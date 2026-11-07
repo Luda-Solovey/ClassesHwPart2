@@ -5,7 +5,7 @@
     {
         private double perimetr;
 
-        public override string  Name => "Rectangle";
+        public override string Name => "Rectangle";
 
         public Point A { get; } = a;
         public Point B { get; } = b;
@@ -19,11 +19,74 @@
 
         public void Draw(ConsoleColor backColor, ConsoleColor foreColor)
         {
+            //int hight = 5; //(int)Math.Round(Math.Max(Side1, Side2));
+
             Console.BackgroundColor = backColor;
             Console.ForegroundColor = foreColor;
 
             Console.WriteLine($"{Name}:");
-            Console.WriteLine("Triengle for now *************************");
+
+            //прямокутник
+            //for (int row = 0; row < hight; row++)
+            //{
+            //    for (int column = 0; column < hight; column++)
+            //    {
+            //        Console.Write("*");
+            //    }
+            //        Console.Write("\n");
+            //}
+
+            //for (int row = 0; row < hight; row++)
+            //{
+            //    for (int column = 0; column <= row; column++)
+            //    {
+            //        Console.Write("*");
+            //    }
+            //    Console.Write("\n");
+            //}
+
+            //---------------------------------
+            int height = 5;
+
+            //for (int row = 1; row <= height; row++)
+            //{
+
+            //    // Пробіли
+            //    for (int space = 1; space <= height - row; space++)
+            //    {
+            //        Console.Write(" ");
+            //    }
+
+            //    // Зірочки
+            //    for (int star = 1; star <= row; star++)
+            //    {
+            //        Console.Write("*");
+            //    }
+
+            //    Console.WriteLine();
+            //}
+
+            for (int row = 1; row <= height; row++)
+            {
+                for (int column = 1; column <= row; column++)
+                {
+                    if (column == 1 ||
+                        column == row ||
+                        row == height)
+
+                    {
+                        Console.Write("*");
+                    }
+                    else
+                    { 
+                        Console.Write(" "); 
+                    }
+                }
+                    Console.WriteLine();
+            }
+            
+
+            //Console.WriteLine($"Triengle for now *************************");
 
             Console.ResetColor();
         }

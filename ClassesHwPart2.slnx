@@ -8,6 +8,8 @@
   <Project Path="Invoice/Invoice.csproj" />
   <Project Path="MediaPlayer/MediaPlayer.csproj" Id="d776b7e7-adcd-4db3-89ce-9774c4111e78" />
   <Project Path="PrinterApp/PrinterApp.csproj" Id="94c43541-6eab-4884-956d-7e95623e8f10" />
+  <Project Path="Structure_VolodimyrTask/Structure_VolodimyrTask.csproj" Id="cedf2175-760c-4009-9d53-b8bc652b1e79" />
+  <Project Path="ToPracticeForInFor/ToPracticeForInFor.csproj" Id="33bba858-ad0d-4426-aebc-c5eab2237d1a" />
   <Project Path="User/User.csproj" />
   <Project Path="Vehicle/VehicleApp.csproj" Id="6353fc9f-ba9c-475b-90f5-89c58bcf4e85" />
 </Solution>
