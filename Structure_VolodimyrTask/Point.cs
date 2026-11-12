@@ -5,9 +5,9 @@
         private int x = x;
         private int y = y;
 
-        public int X => x;
+        public readonly int X => x;
 
-        public int Y => y;
+        public readonly int Y => y;
         private string name = name;
         private readonly ConsoleColor consoleColor = consoleColor;
 

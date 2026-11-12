@@ -8,7 +8,11 @@
   <Project Path="Invoice/Invoice.csproj" />
   <Project Path="MediaPlayer/MediaPlayer.csproj" Id="d776b7e7-adcd-4db3-89ce-9774c4111e78" />
   <Project Path="PrinterApp/PrinterApp.csproj" Id="94c43541-6eab-4884-956d-7e95623e8f10" />
+  <Project Path="StructEmployee/StructEmployee.csproj" Id="9b537945-9b7e-473c-9dbf-b44cda075fe1" />
+  <Project Path="StructNotebook/StructNotebook.csproj" Id="f9618879-b23b-483e-85c6-470067cbe247" />
+  <Project Path="StructTrain/StructTrain.csproj" Id="db839557-d592-4486-b627-7db9df7bc502" />
   <Project Path="Structure_VolodimyrTask/Structure_VolodimyrTask.csproj" Id="cedf2175-760c-4009-9d53-b8bc652b1e79" />
+  <Project Path="Struct_SpanTime/Struct_TimeSpan.csproj" Id="53274226-06e8-4471-8a09-e1ae93040c6b" />
   <Project Path="ToPracticeForInFor/ToPracticeForInFor.csproj" Id="33bba858-ad0d-4426-aebc-c5eab2237d1a" />
   <Project Path="User/User.csproj" />
   <Project Path="Vehicle/VehicleApp.csproj" Id="6353fc9f-ba9c-475b-90f5-89c58bcf4e85" />
