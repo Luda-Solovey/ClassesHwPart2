@@ -10,13 +10,14 @@
         /// <param name="args"></param>
         static void Main(string[] args)
         {
-            Employee employee = new ("Solovey", "Ludmila", "Olexandrivna", Gender.Female)
+            Employee employee = new("Solovey", "Ludmila", "Olexandrivna", Gender.Female)
             {
                 IsMarried = true,
                 WorkType = WorkType.Contract,
                 Rating = Rating.Low,
                 IsResident = true,
-                IsActive = true
+                IsActive = true,
+                Address = new("Dnipro", "Shevchenko", 12)
             };
         }
     }
