@@ -20,11 +20,12 @@
 
         public bool IsActive { get; set; }
 
-        public List<LanguageSkills> LanguageSkillsList { get; set; } = new List<LanguageSkills>() { LanguageSkills.Ukrainian };
+        public List<LanguageSkills> LanguageSkillsList { get; set; }
 
         public Employee(string firstName, string lastName, string patronymic, Gender gender) 
             : base(firstName, lastName, patronymic, gender)
         {
+            List<LanguageSkills> LanguageSkillsList = [LanguageSkills.Ukrainian];
         }
 
     }
