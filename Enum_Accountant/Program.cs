@@ -11,13 +11,31 @@
         /// <param name="args"></param>
         static void Main(string[] args)
         {
+            Console.WriteLine("Employees has bonus or not");
             Employee developer = new ("John", "Doe", Position.Developer);
             bool isBonusDueDeveloper = Accountant.AskForBonus(developer, 200);
-            Console.WriteLine(isBonusDueDeveloper);
+            Console.WriteLine($"{developer.FullName} - {isBonusDueDeveloper}");
 
             Employee designer = new Employee("Alex", "Bespalov", Position.Designer);
             bool isBonusDueDesigner = Accountant.AskForBonus(designer, 170);
-            Console.WriteLine(isBonusDueDesigner);
+            Console.WriteLine($"{designer.FullName} - {isBonusDueDesigner}");
+
+            Employee tester = new Employee("Illia", "Sokol", Position.Tester);
+            bool isBonusDueTester = Accountant.AskForBonus(tester, 200);
+            Console.WriteLine($"{tester.FullName} - {isBonusDueTester}");
+
+            //Employee[] employeeList = [developer, designer, tester];
+            //Console.WriteLine("Bonus will get:");
+            //for (int i = 0; i < employeeList.Length; i++)
+            //{
+            //    if (employeeList[i].)
+            //    {
+
+            //    }
+            //}
+
+
+
 
         }
     }

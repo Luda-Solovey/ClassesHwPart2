@@ -16,6 +16,14 @@ namespace Enum_Employee
             int requiredHours = (int)worker.Position;
             return workedHours > requiredHours;
         }
+
+        //public static void AskForBonus(Employee[] workers, int workedHours)
+        //{
+        //    foreach (var worker in workers)
+        //    {
+        //        Console.WriteLine($"Employee {worker.FirstName} {worker.LastName} deserves bonus: {(int)worker.Position > workedHours}");
+        //    }
+        //}
     }
 }
 

@@ -7,6 +7,8 @@ namespace Enum_Employee
 
         public string LastName { get; set; }
 
+        public string FullName => FirstName + " " + LastName;
+
         public Employee(string firstName, string lastName, Position position)
         {
             FirstName = firstName;
