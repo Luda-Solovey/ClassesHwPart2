@@ -1,4 +1,6 @@
-﻿namespace Enum_Employee
+﻿using System.Text;
+
+namespace Enum_Employee
 {
     public class Program
     {
@@ -11,6 +13,9 @@
         /// <param name="args"></param>
         static void Main(string[] args)
         {
+            Console.OutputEncoding = Encoding.UTF8;
+            Console.InputEncoding = Encoding.UTF8;
+
             Console.WriteLine("Employees has bonus or not");
             Employee developer = new ("John", "Doe", Position.Developer);
             bool isBonusDueDeveloper = Accountant.AskForBonus(developer, 200);
@@ -33,10 +38,6 @@
 
             //    }
             //}
-
-
-
-
         }
     }
 }

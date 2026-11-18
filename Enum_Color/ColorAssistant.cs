@@ -16,10 +16,9 @@
             }
             else
             {
-                Console.WriteLine("Невідомий колір."); 
+                Console.WriteLine("введений колір не представлений в переліку ConsoleColor. Оберіть інший колір.");
                 return;
             }
-
         }
     }
 }
