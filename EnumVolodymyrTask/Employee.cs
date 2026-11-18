@@ -20,13 +20,21 @@
 
         public bool IsActive { get; set; }
 
-        public List<LanguageSkills> LanguageSkillsList { get; set; }
+        public SalaryType SalaryType { get; set; }
 
-        public Employee(string firstName, string lastName, string patronymic, Gender gender) 
+        public Department? Department { get; set; }
+
+        public IEnumerable<LanguageSkills> LanguageSkillsList { get; set; } = [LanguageSkills.Ukrainian]; //або масив
+
+        public Employee(string firstName, string lastName, string patronymic, Gender gender, IEnumerable<LanguageSkills> languageSkillsList) 
             : base(firstName, lastName, patronymic, gender)
         {
-            List<LanguageSkills> LanguageSkillsList = [LanguageSkills.Ukrainian];
+            LanguageSkillsList = languageSkillsList ?? [LanguageSkills.Ukrainian];
         }
 
+        public Employee(string firstName, string lastName, string patronymic, Gender gender)
+            : base(firstName, lastName, patronymic, gender)
+        {
+        }
     }
 }
